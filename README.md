@@ -4,8 +4,8 @@ Este es un sistema de comercio electrónico para propósitos de prueba.
 
 ## Índice
 - [Instalación](#instalación)
-- [Uso](#uso)
 - [Base de Datos](#base-de-datos)
+- [Uso](#uso)
 
 ## Instalación
 
@@ -49,3 +49,5 @@ Puedes acceder a MongoDB usando las siguientes credenciales:
 - **database:** ecommerce
 
 ![Tables](https://github.com/juanmaabanto/ecommerce-test/blob/main/screenshots/tables.png)
+
+## USO
