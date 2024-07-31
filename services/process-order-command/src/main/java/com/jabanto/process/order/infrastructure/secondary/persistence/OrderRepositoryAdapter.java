@@ -4,6 +4,7 @@ import com.jabanto.process.order.core.domain.Order;
 import com.jabanto.process.order.core.ports.OrderPersistencePort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import reactor.core.publisher.Mono;
 
 @Component
 public class OrderRepositoryAdapter implements OrderPersistencePort {
@@ -16,7 +17,7 @@ public class OrderRepositoryAdapter implements OrderPersistencePort {
     }
 
     @Override
-    public void save(Order order) {
-        this.orderDao.save(order).subscribe();
+    public Mono<Void> save(Order order) {
+        return this.orderDao.save(order).then();
     }
 }
