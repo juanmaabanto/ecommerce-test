@@ -25,4 +25,4 @@ up: create-networks create-volumes docker-build
 	chmod +x ./kafka/create-topic.sh && ./kafka/create-topic.sh
 
 producer:
-	@echo '{"date": "2024-07-31", "customerID": "60d5f483f1e1b6c9b4f6c98f", "products": [{"id": "60d5f483f1e1b6c9b4f6c993", "Quantity": 1}, {"id": "60d5f483f1e1b6c9b4f6c994", "Quantity": 2}]}' | docker exec -i kafka_ecommerce /usr/bin/kafka-console-producer --broker-list localhost:29092 --topic order-receive-topic
+	@echo '{"date": "2024-07-31", "customerID": "60d5f483f1e1b6c9b4f6c98f", "products": [{"id": "60d5f483f1e1b6c9b4f6c993", "quantity": 1}, {"id": "60d5f483f1e1b6c9b4f6c994", "quantity": 2}]}' | docker exec -i kafka_ecommerce /usr/bin/kafka-console-producer --broker-list localhost:29092 --topic order-receive-topic
