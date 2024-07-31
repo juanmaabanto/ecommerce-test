@@ -17,6 +17,7 @@ create-volumes:
 docker-build:
 	docker build -t product-query ./services/product-query
 	docker build -t customer-query ./services/customer-query
+	docker build -t process-order-command ./services/process-order-command
 
 up: create-networks create-volumes docker-build
 	@docker compose -p ecommerce-test --project-directory . \

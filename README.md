@@ -1,6 +1,6 @@
 # ecommerce-test
 
-Este es un sistema de comercio electrónico para propósitos de prueba.
+Este es un sistema de comercio electrónico para propósitos de prueba. Tiene 3 servicios, customer-query y product-query que exponen API para obtener información, y un worker suscrito a un tópico kafka para procesar una orden.
 
 ## Índice
 - [Instalación](#instalación)
@@ -51,3 +51,9 @@ Puedes acceder a MongoDB usando las siguientes credenciales:
 ![Tables](https://github.com/juanmaabanto/ecommerce-test/blob/main/screenshots/tables.png)
 
 ## USO
+
+Una vez los contenedores se encuentren corriendo, en la misma raíz del repositorio ejecutar otro comando make para que se publique un mensaje en el topico
+
+```sh
+   make producer
+   ```

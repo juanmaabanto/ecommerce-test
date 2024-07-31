@@ -70,6 +70,25 @@ services:
     networks:
       - ecommerce-network
 
+  process-order-command:
+    image: process-order-command
+    container_name: process-order-command
+    restart: on-failure
+    depends_on:
+      - kafka
+      - mongodb
+    environment:
+      - MONGODB_URI=mongodb://test:testPWD@mongodb:27017/ecommerce
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+      - API_CUSTOMERS_URL=http://customer-query:3000
+      - API_PRODUCTS_URL=http://product-query:3000/api/v1/products
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    networks:
+      - ecommerce-network
+
 volumes:
   mongo-data:
     external: true
