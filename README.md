@@ -11,6 +11,7 @@ Este es un sistema de comercio electrónico para propósitos de prueba. Tiene 3 
 
 Para levantar la aplicación en el entorno local, asegúrate de tener instalados los siguientes requisitos:
 
+- Linux ó MacOS
 - Docker
 - Docker Compose
 - Make
