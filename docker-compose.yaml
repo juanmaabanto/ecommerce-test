@@ -41,6 +41,20 @@ services:
     networks:
       - ecommerce-network
 
+  product-query:
+    image: product-query
+    container_name: product-query
+    environment:
+      - MONGODB_URI=mongodb://test:testPWD@mongodb:27017/ecommerce
+    depends_on:
+      - mongodb
+    expose:
+      - 3000
+    ports:
+      - 3001:3000
+    networks:
+      - ecommerce-network
+
 volumes:
   mongo-data:
     external: true

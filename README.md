@@ -36,7 +36,7 @@ Para levantar la aplicación en el entorno local, asegúrate de tener instalados
 
 ## Base de Datos
 
-La aplicación utiliza MongoDB como base de datos. Aquí tienes una vista de las tablas:
+La aplicación utiliza MongoDB como base de datos.
 
 ### Acceso a Mongo DB
 

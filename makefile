@@ -14,9 +14,10 @@ create-volumes:
 		echo "volume created: 'mongo-data'"; \
 	fi
 
-platform-up: create-networks create-volumes
+docker-build:
+	docker build -t product-query ./services/product-query
+
+up: create-networks create-volumes docker-build
 	@docker compose -p ecommerce-test --project-directory . \
 	-f ./docker-compose.yaml \
 	up -d --force-recreate
-
-up: platform-up
